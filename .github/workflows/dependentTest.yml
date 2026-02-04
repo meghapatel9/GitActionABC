@@ -6,7 +6,7 @@ on: push
 
 jobs:
   job_on_ubuntu:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - run: date
     
