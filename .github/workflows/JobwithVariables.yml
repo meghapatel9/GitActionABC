@@ -3,6 +3,9 @@ on: push
 jobs:
   deploy-staging:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write # This is required for OIDC to request an ID token
+      contents: read
     env:
       AWS_REGION: us-east-1
       CONTAINER_NAME: nice-app-service
